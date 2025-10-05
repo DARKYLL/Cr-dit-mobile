@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acheter du Crédit</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Animation AOS (si tu veux une animation au scroll) -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Crédit Mobile</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="acheter.html">Acheter</a>
+    </nav>
+  </header>
+
+  <section class="main-section">
+    <h2>Acheter du Crédit Téléphonique</h2>
+    <form class="purchase-form">
+      <label for="numero">Numéro de téléphone :</label>
+      <input type="tel" id="numero" name="numero" placeholder="07 XX XX XX XX" required />
+
+      <label for="operateur">Opérateur :</label>
+      <select id="operateur" name="operateur" required>
+        <option value="orange">Orange</option>
+        <option value="mtn">MTN</option>
+      </select>
+
+      <!-- Logos dynamiques -->
+      <div class="logo-container" data-aos="fade-up">
+        <img src="images/orange-logo.png" alt="Logo Orange" class="logo" />
+        <img src="images/mtn-logo.png" alt="Logo MTN" class="logo" />
+      </div>
+
+      <label for="montant">Montant :</label>
+      <select id="montant" name="montant" required>
+        <option value="1000">1 000 FCFA</option>
+        <option value="2000">2 000 FCFA</option>
+        <option value="5000">5 000 FCFA</option>
+        <option value="10000">10 000 FCFA</option>
+      </select>
+
+      <button type="submit">Payer maintenant</button>
+    </form>
+  </section>
+
+  <!-- Animation AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
