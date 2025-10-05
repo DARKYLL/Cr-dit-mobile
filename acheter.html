@@ -51,6 +51,26 @@
   <!-- Animation AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script>
+  document.getElementById('payBtn').addEventListener('click', async () => {
+    try {
+      const response = await fetch('/create-invoice', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          amount: 1000, 
+          description: 'Achat sur mon site' 
+        })
+      });
+      const data = await response.json();
+      window.location.href = data.invoice_url; // redirige vers PayDunya
+    } catch (err) {
+      alert('Erreur lors du paiement. Réessayez.');
+      console.error(err);
+    }
+  });
+</script>
 </body>
 
 </html>
+
